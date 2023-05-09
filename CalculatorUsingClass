@@ -1,0 +1,48 @@
+'''program for basic calculator'''
+print("\t\t\t\t BASIC CALCULATOR\t\t\t\t")
+
+"""constructing a class"""
+class Calculator:
+    def __init__(self, num_1, num_2):
+        self.num_1 = num_1
+        self.num_2 = num_2
+
+    def add(self):
+        return self.num_1 + self.num_2
+
+    def sub(self):
+        return self.num_1 - self.num_2
+
+    def multiply(self):
+        return self.num_1 * self.num_2
+
+    def divide(self):
+        return self.num_1 / self.num_2
+
+
+num_1 = int(input('Enter First number : '))
+num_2 = int(input('Enter Second number : '))
+obj = Calculator(num_1, num_2)
+while True:
+    def menu():
+        x = ("1. Add \n2. Sub \n3. Multiply \n4. Divide")
+        print(x)
+
+
+    menu()
+    choice = int(input('Please select one of the following : '))
+    if choice == 1:
+        print("Result: ", obj.add())
+    elif choice == 2:
+        print("Result: ", obj.sub())
+    elif choice == 3:
+        print("Result: ", obj.multiply())
+    elif choice == 4:
+        print("Result: ", obj.divide())
+    elif choice == 0:
+        print('Again try one of the following')
+        break
+    else:
+        print('Invalid option')
+        break
+print()
