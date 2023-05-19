@@ -1,0 +1,32 @@
+'''
+program to build basic calculator using FastAPI
+'''
+from fastapi import FastAPI
+'''
+to import the FastAPI module
+'''
+app = FastAPI()
+'''
+to add two numbers
+'''
+@app.get("/add/{num_1}/{num_2}")
+async def add(num_1: int, num_2: int):
+    return {"result:", num_1 + num_2}
+'''
+to subtract two numbers
+'''
+@app.get("/subtract/{num_1}/{num_2}")
+async def subtract(num_1: int, num_2: int):
+    return {"result:", num_1 - num_2}
+'''
+to multiply two numbers
+'''
+@app.get("/multiply/{num_1}/{num_2}")
+async def multiply(num_1: int, num_2: int):
+    return {"result:", num_1 * num_2}
+'''
+to divide two numbers
+'''
+@app.get("/divide/{num_1}/{num_2}")
+async def divide(num_1: int, num_2: int):
+    return {"result:", num_1 / num_2}
